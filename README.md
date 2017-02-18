@@ -15,5 +15,7 @@ To run locally on a mac:
 - Type: dev_appserver.py .
 - Open "localhost:8080" in your browser
 
+### Online Version
+The project is accessible here [Multi-User Blog](https://homework-3-156804.appspot.com/)
 ##Authors
 * **Andree Wijaya**
