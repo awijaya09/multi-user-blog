@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>Sign Up Form</h2>
+            <form class="col-md-12 form-content" method="post">
+                <div class="form-group">
+                    <label for="username-input">Username</label>
+                    <input class="form-control" name="username" id="username-input" value="{{ username }}">
+                </div>
+                <div class="form-group">
+                    <label for="pswd-input">Password</label>
+                    <input class="form-control" type="password" name="password" id="pswd-input" value="{{ password }}">
+                </div>
+                <div class="form-group">
+                    <label for="verify-input">Verify Password</label>
+                    <input class="form-control" type="password" name="verify" id="verify-input">
+                </div>
+                <div class="form-group">
+                    <label for="email-input">Email (optional)</label>
+                    <input class="form-control" type="email" name="email" id="email-input" value="{{ email }}">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+            <div class="col-md-12 error-post">{{ error }}</div>
+            <div>Have an account ?<a href="/login"> Login here!</a></div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+{% endblock %}

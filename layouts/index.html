@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="col-md-12 greeting">{{ greetings }}</h1>
+            <h3 class="blog-title">Twiscle Blog</h1>
+            <p class="lead blog-description">Simple blog for Udacity Full Stack Web Development Course</p>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                {% for content in contents %}
+                    {{ content.render() | safe }}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

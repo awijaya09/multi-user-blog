@@ -1,0 +1,57 @@
+.main-content{
+    padding: 70px 0 0 0;
+}
+
+.blog-post-meta{
+    font-size: 12px;
+}
+
+.form-content{
+    padding: 30px 0 20px 0;
+}
+.signup-content{
+    padding: 30px 0 20px 0;
+}
+.error-post{
+    padding: 20px 0 0 10px;
+    color:red;
+}
+
+.archive-post{
+    max-height: 3.9em;
+    overflow: hidden;
+}
+
+.archive-header{
+    line-height: 1.3em;
+}
+
+.post-excerpt{
+    max-height: 4.5em;
+    overflow: hidden;
+}
+
+.blog-post-title{
+    color:black;
+}
+
+.like-button{
+    padding: 15px 0 10px 0;
+}
+
+.like-counter{
+    padding: 10px 0 10px 10px;
+}
+
+.comment-section{
+    padding: 30px 0 15px 25px;
+}
+
+.comment-content{
+    font-size: 13px;
+    color:#8c8c8c;
+}
+
+.comment-list{
+    padding: 15px 0 0 10px;
+}

@@ -1,0 +1,45 @@
+<div class="col-md-9">
+    <div class="col-md-12">
+        <h4 class="blog-post-title">{{ blogpost.subject }}</h4>
+        <p class="blog-post-meta">{{ blogpost.date.strftime("%d %B %Y, %I:%M %p") }}, by <strong>{{blogpost.author.username}}</strong></p>
+        <p>{{ blogpost._render_text | safe }}</p>
+    </div>
+    {% if isAuthor %}
+        <div class="col-xs-2 col-md-1">
+            <a class="btn btn-info" href="/edit/{{blogpost.key().id()}}" role="button">Edit</a>
+        </div>
+        <div class="col-xs-2 col-md-1">
+            <a class="btn btn-danger" href="/delete/{{blogpost.key().id()}}" role="button">Delete</a>
+        </div>
+    {% endif %}
+        <div class="col-xs-8 col-md-10">
+            <div class="col-xs-2 col-md-2">
+                <form method="post">
+                    <button type="submit" class="btn btn-default" name="likeBtn">Like</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 like-counter">
+                <strong class="like-counter">{{ likeCounter }} Like(s) . {{commentCounter}} Comment(s)</strong>
+                <p class="error-post">{{ error_like }}</p>
+        </div>
+
+</div>
+<div class="col-md-3">
+    <h4>Related Topics</h4>
+    <div class="list-group">
+        {% if related %}
+            {% for post in related %}
+                {% if post.key().id() != blogpost.key().id() %}
+                    <a href='/{{ post.key().id() }}' class="list-group-item">
+                        <h6 class="list-group-item-heading archive-header">{{ post.subject }}</h4>
+                        <p class="list-group-item-text archive-post"><small>{{ post.content | safe }}</small></p>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>No other post</p>
+        {% endif %}
+    </div>
+</div>
