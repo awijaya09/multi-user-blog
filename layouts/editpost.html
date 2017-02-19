@@ -14,7 +14,8 @@
                         <label for="contentarea">Content</label>
                         <textarea class="form-control" id="contentarea" name="content" placeholder="Start writing your post here" rows="8">{{ blogpost.content | safe }} </textarea>
                     </div>
-                    <button type="submit" class="btn btn-default btn-lg">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a href="/{{ blogpost.key().id() }}" role="button" class="btn btn-danger">Cancel</a>
                 </form>
                 <div class="col-md-12 error-post">{{ error }}</div>
             </div>
